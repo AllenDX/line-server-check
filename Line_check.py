@@ -42,8 +42,8 @@ user_id = 'Ub39505c0d61a045a0f0dc27aab13aa29'
 dateTimeObj = datetime.now()
 Realtime = dateTimeObj.strftime("%Y-%m-%d")
 
-# 監聽所有來自 /callback 的 Post Request
-@app.route("/", methods=['POST'])
+# 監聽所有來自 /callback 的 Post Request   
+@app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
     signature = request.headers['X-Line-Signature']
